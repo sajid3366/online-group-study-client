@@ -1,8 +1,8 @@
 import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
-import swal from 'sweetalert';
 import { updateProfile } from 'firebase/auth';
+import Swal from 'sweetalert2';
 
 const Signup = () => {
     const { signUp} = useContext(AuthContext)
@@ -47,7 +47,7 @@ const Signup = () => {
                     name, email, password, photo
                 }
                 console.log(user);
-                fetch('https://automotive-server-ev0wqh55k-ahtesham-sajids-projects.vercel.app/user', {
+                fetch('http://localhost:5000/user', {
                     method: "POST",
                     headers: {
                         'content-type': 'application/json'
@@ -59,7 +59,7 @@ const Signup = () => {
                     .then(data => {
                         console.log(data);
                         if (data.insertedId) {
-                            swal.fire({
+                            Swal.fire({
                                 title: 'Success!',
                                 text: 'User Created successfully',
                                 icon: 'success',

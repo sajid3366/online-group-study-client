@@ -1,9 +1,14 @@
+import Banner from "./Banner";
+import Faq from "./Faq";
+import Features from "./Features";
 
 
 const Home = () => {
     return (
         <div>
-            hello vai from home
+            <Banner></Banner>
+            <Features></Features>
+            <Faq></Faq>
         </div>
     );
 };

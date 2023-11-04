@@ -17,57 +17,73 @@ const Navbar = () => {
                     <img className='w-full lg:w-[200px] cursor-pointer' src="https://i.ibb.co/JQLmnhr/logo-carhant.png" alt="" />
                 </Link>
             </div>
-            <ul className="flex justify-center mt-5 lg:mt-0 lg:ml-12 items-center gap-x-6">
-                <li>
-                    <NavLink
-                        to="/"
-                        className={({ isActive, isPending }) =>
+            <div className='flex'>
+                <ul className="flex justify-center mt-5 lg:mt-0 lg:ml-12 items-center gap-x-6">
+                    <li>
+                        <NavLink
+                            to="/"
+                            className={({ isActive, isPending }) =>
+                                isActive ? "text-[#FF444A] underline font-bold" : isPending ? "pending" : ""
+                            }>
+                            Home
+                        </NavLink>
+
+                    </li>
+                    <li>
+                        <NavLink to="/createassignments" className={({ isActive, isPending }) =>
                             isActive ? "text-[#FF444A] underline font-bold" : isPending ? "pending" : ""
                         }>
-                        Home
-                    </NavLink>
+                            Create Assignments
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/assignments" className={({ isActive, isPending }) =>
+                            isActive ? "text-[#FF444A] underline font-bold" : isPending ? "pending" : ""
+                        }>
+                            Assignments
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/myassignments" className={({ isActive, isPending }) =>
+                            isActive ? "text-[#FF444A] underline font-bold" : isPending ? "pending" : ""
+                        }>
+                            My Assignments
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/submittedassignments" className={({ isActive, isPending }) =>
+                            isActive ? "text-[#FF444A] underline font-bold" : isPending ? "pending" : ""
+                        }>
+                            Submitted Assignments
+                        </NavLink>
+                    </li>
 
-                </li>
-                <li>
-                    <NavLink to="/addproduct" className={({ isActive, isPending }) =>
-                        isActive ? "text-[#FF444A] underline font-bold" : isPending ? "pending" : ""
-                    }>
-                        Add Product
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink to="/mycart" className={({ isActive, isPending }) =>
-                        isActive ? "text-[#FF444A] underline font-bold" : isPending ? "pending" : ""
-                    }>
-                        My Cart
-                    </NavLink>
-                </li>
+                </ul>
+                <div className="mt-5 lg:ml-10 flex justify-center items-center gap-2 lg:mt-0 py-2">
 
-            </ul>
-            <div className="mt-5 lg:ml-14 flex justify-center items-center gap-2 lg:mt-0 py-2">
+                    <div>
+                        {
+                            user ? <>
 
-                <div>
-                    {
-                        user ? <>
+                                <div className="flex gap-2 items-center">
 
-                            <div className="flex gap-2 items-center">
+                                    {/* <p className="text-xl w-full flex  font-semibold">{user.displayName}</p> */}
+                                    <img className={` w-[40px] h-[40px] rounded-full`} src={user.photoURL} alt="" />
+                                    <div>
+                                        <button onClick={handleLogout} className="  ml-2 bg-slate-300 rounded-sm  text-black px-4 py-2">Logout</button>
+                                    </div>
 
-                                <p className="text-xl w-full flex  font-semibold">{user.displayName}</p>
-                                <img className="w-[50px] h-[40px] rounded-full" src={user.photoURL} alt="" />
-                                <div>
-                                    <button onClick={handleLogout} className="ml-2 bg-slate-300 rounded-sm  text-black px-4 py-2">Logout</button>
                                 </div>
+                            </>
+                                : <div className="w-1/3  items-center">
+                                    <NavLink to='/login'><button className="bg-slate-300 rounded-sm text-black  px-4 py-2">Login</button></NavLink>
+                                </div>
+                        }
+                    </div>
 
-                            </div>
-                        </>
-                            : <div className="w-1/3  items-center">
-                                <NavLink to='/login'><button className="bg-slate-300 rounded-sm text-black  px-4 py-2">Login</button></NavLink>
-                            </div>
-                    }
+
+
                 </div>
-                
-
-
             </div>
 
 
