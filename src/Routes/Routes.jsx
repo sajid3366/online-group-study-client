@@ -9,6 +9,9 @@ import Assignments from "../Pages/Assignments/Assignments";
 import SubmittedAssignments from "../Pages/SubmittedAssignments/SubmittedAssignments";
 import ViewDetails from "../Pages/ViewDetails/ViewDetails";
 import UpdateAssignment from "../Pages/UpdateAssignment/UpdateAssignment";
+import MyAssignments from "../Pages/MyAssignments/MyAssignments";
+import SubmitAssignment from "../Pages/ViewDetails/SubmitAssignment";
+import GiveMark from "../Pages/SubmittedAssignments/GiveMark";
 
 
 const router = createBrowserRouter([
@@ -39,11 +42,12 @@ const router = createBrowserRouter([
             },
             {
                 path: "myassignments",
-                element: <PrivateRoute><Assignments></Assignments></PrivateRoute>
+                element: <PrivateRoute><MyAssignments></MyAssignments></PrivateRoute>
             },
             {
                 path: "submittedassignments",
-                element: <PrivateRoute><SubmittedAssignments></SubmittedAssignments></PrivateRoute>
+                element: <PrivateRoute><SubmittedAssignments></SubmittedAssignments></PrivateRoute>,
+                loader: () => fetch(`http://localhost:5000/myassignment/Pending`)
             },
             {
                 path: '/viewdetails/:id',
@@ -54,7 +58,19 @@ const router = createBrowserRouter([
                 path: "/update/:id",
                 element: <PrivateRoute><UpdateAssignment></UpdateAssignment></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/assignment/update/${params.id}`)
+            },
+            {
+                path: "/submitassignment/:id",
+                element: <SubmitAssignment></SubmitAssignment>,
+                loader : ({params}) => fetch(`http://localhost:5000/myassignment/submit/${params.id}`)
+                
+            },
+            {
+                path: "/givemark/:id",
+                element: <GiveMark></GiveMark>,
+                loader: ({params}) => fetch(`http://localhost:5000/myassignment/givemark/${params.id}`)
             }
+
 
         ]
     }

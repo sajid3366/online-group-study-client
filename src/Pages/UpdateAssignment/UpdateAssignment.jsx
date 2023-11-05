@@ -1,11 +1,14 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 import DatePicker from "react-datepicker";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const UpdateAssignment = () => {
+    const { user } = useContext(AuthContext)
     const assignment = useLoaderData();
     console.log(assignment);
+
     const { id } = useParams();
     console.log(id);
     const [startDate, setStartDate] = useState();
@@ -21,10 +24,32 @@ const UpdateAssignment = () => {
         const date = form.date.value;
         const description = form.description.value;
         const photo = form.photo.value;
-        // const email = user.email;
+        const email = user.email;
 
-        const newAssignment = { title, difficulty, mark, date, description, photo };
-        console.log(newAssignment);
+        const updateAssignment = { email, title, difficulty, mark, date, description, photo , status: "ok" };
+        console.log(updateAssignment);
+        fetch(`http://localhost:5000/assignment/${assignment._id}`, {
+            method: "PUT",
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updateAssignment)
+
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.modifiedCount > 0) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Updated Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+
+                    })
+
+                }
+            })
     }
 
     return (
@@ -60,8 +85,7 @@ const UpdateAssignment = () => {
 
                     <div className='md:w-1/2'>
                         <p>Due Date</p>
-                        <DatePicker dateFormat="DD-MM-YYYY"
-                            z
+                        <DatePicker
                             className="border-2 rounded-md mt-2 px-4 border-solid w-[500px] h-[50px]" name="date" placeholderText="Due Date" selected={startDate} onChange={(date) => setStartDate(date)} />
 
                     </div>
