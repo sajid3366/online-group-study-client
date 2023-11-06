@@ -1,7 +1,6 @@
 import { useLoaderData } from "react-router-dom";
-import Sidebar from "./Sidebar";
 import AllAssignments from "./AllAssignments";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 
 const Assignments = () => {
@@ -14,15 +13,6 @@ const Assignments = () => {
         e.preventDefault();
         const form = e.target;
         const difficulty = form.difficulty.value;
-        console.log(difficulty);
-        // http://localhost:5000/assignmentlevel/Hard
-        // useEffect(() =>{
-        //     fetch(`http://localhost:5000/assignmentlevel/${difficulty}`)
-        //     .then(res => res.json())
-        //     .then(data =>{
-        //         console.log(data);
-        //     })
-        // },[difficulty])
         axios.get(`http://localhost:5000/assignmentlevel/${difficulty}`)
         .then(result => {
             setAssignments(result.data);

@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom";
 import { MdDelete } from "react-icons/md";
 import Swal from "sweetalert2";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 // eslint-disable-next-line react/prop-types
 const AllAssignments = ({ assignment, assignments, setAssignments }) => {
+
+    const { user } = useContext(AuthContext)
+    
     // eslint-disable-next-line react/prop-types
     const { _id, title, photo, mark, difficulty } = assignment;
 
@@ -21,26 +26,34 @@ const AllAssignments = ({ assignment, assignments, setAssignments }) => {
         })
             .then((result) => {
                 if (result.isConfirmed) {
+                    if (assignment.email === user.email) {
+                        fetch(`http://localhost:5000/assignment/${id}`, {
+                            method: "DELETE",
 
-
-                    fetch(`http://localhost:5000/assignment/${id}`, {
-                        method: "DELETE",
-
-                    })
-                        .then(res => res.json())
-                        .then(data => {
-                            console.log(data);
-                            if (data.deletedCount > 0) {
-                                Swal.fire(
-                                    'Deleted!',
-                                    'Your coffee has been deleted.',
-                                    'success'
-                                )
-                                // eslint-disable-next-line react/prop-types
-                                const remaining = assignments.filter(assignment => assignment._id !== id);
-                                setAssignments(remaining);
-                            }
                         })
+                            .then(res => res.json())
+                            .then(data => {
+                                console.log(data);
+                                if (data.deletedCount > 0) {
+                                    Swal.fire(
+                                        'Deleted!',
+                                        'Your coffee has been deleted.',
+                                        'success'
+                                    )
+                                    // eslint-disable-next-line react/prop-types
+                                    const remaining = assignments.filter(assignment => assignment._id !== id);
+                                    setAssignments(remaining);
+                                }
+                            })
+                    }
+                    else{
+                        Swal.fire({
+                            title: 'Error!',
+                            text: 'Acces Denied',
+                            icon: 'error',
+                            confirmButtonText: 'OK'
+                        })
+                    }
                 }
             })
     }
