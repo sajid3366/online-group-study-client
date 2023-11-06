@@ -2,7 +2,9 @@ import { Link } from "react-router-dom";
 import { MdDelete } from "react-icons/md";
 import Swal from "sweetalert2";
 
+// eslint-disable-next-line react/prop-types
 const AllAssignments = ({ assignment, assignments, setAssignments }) => {
+    // eslint-disable-next-line react/prop-types
     const { _id, title, photo, mark, difficulty } = assignment;
 
 
@@ -34,6 +36,7 @@ const AllAssignments = ({ assignment, assignments, setAssignments }) => {
                                     'Your coffee has been deleted.',
                                     'success'
                                 )
+                                // eslint-disable-next-line react/prop-types
                                 const remaining = assignments.filter(assignment => assignment._id !== id);
                                 setAssignments(remaining);
                             }
@@ -44,7 +47,7 @@ const AllAssignments = ({ assignment, assignments, setAssignments }) => {
 
     return (
         <div>
-            <div className="bg-gray-100 rounded-lg mb-8 px-5 py-3 lg:flex gap-8">
+            <div className="bg-gray-100 rounded-md mb-8 px-5 py-3 lg:flex gap-8">
                 <img className="w-[450px] rounded-lg h-[250px]" src={photo} alt="" />
                 <div className="lg:w-1/2">
                     <h2 className="text-2xl mt-5  mb-3 lg:mt-5 font-semibold">Title : {title}</h2>
