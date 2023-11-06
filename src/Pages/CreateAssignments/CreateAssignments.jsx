@@ -47,7 +47,7 @@ const CreateAssignments = () => {
     }
 
     return (
-        <div className='bg-[#F4F3F0] px-2 lg:px-[140px] py-12 mt-12 mb-12 rounded-md'>
+        <div className='bg-white px-2 lg:px-[140px] py-12 mt-12 mb-12 rounded-md'>
             <h1 className='text-2xl font-semibold mb-8 text-center'>Create A New Assignment</h1>
 
             <form onSubmit={handleCreateAssignment}>
@@ -61,7 +61,7 @@ const CreateAssignments = () => {
                         <p>Difficulty Level</p>
                         {/* <input className='border-2 mt-2 rounded-md px-4 border-solid w-full h-[50px]' placeholder='Type' type="text" name="difficulty" id="" /> */}
                        
-                        <select name="difficulty" className="select max-w-xs border-2 mt-2 rounded-md px-4 border-solid w-full h-[50px]">
+                        <select name="difficulty" className="select max-w-xs border-gray-300 border-2 mt-2 rounded-md px-4 border-solid w-full h-[50px]">
                             <option>Easy</option>
                             <option>Medium</option>
                             <option>Hard</option>

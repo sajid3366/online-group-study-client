@@ -1,7 +1,7 @@
 
 const Faq = () => {
     return (
-        <div className=" max-w-7xl py-10 px-5 mx-auto mb-20">
+        <div className=" max-w-7xl mt-10 py-10 px-5 mx-auto mb-20">
         <h1 className="text-4xl font-bold mb-3 text-center">People Frequently <span className="text-red-600">Ask</span></h1>
         <hr className="mb-10 max-w-md mx-auto" />
         <div className="lg:flex gap-8 items-center">
@@ -9,28 +9,28 @@ const Faq = () => {
                 <div className="collapse collapse-arrow join-item border border-base-300">
                     <input type="radio" name="my-accordion-4" checked="checked" />
                     <div className="collapse-title text-xl font-medium">
-                        Why choose CarHant?
+                        Why choose Study Corner?
                     </div>
                     <div className="collapse-content">
-                        <p>At Carhant, we redefine the car-buying experience with unmatched expertise, transparency, and customer satisfaction. Our extensive selection of quality vehicles undergoes rigorous inspections to ensure reliability. We prioritize your needs, offering personalized guidance, competitive prices, and flexible financing options. Our team of knowledgeable professionals is dedicated to providing exceptional service, from browsing to financing and beyond.</p>
+                        <p>Study Corner is an online study platform offering convenience, flexibility, and access to resources for students. It provides expert guidance, collaborative learning opportunities, and self-paced education. The platform offers regular feedback, cost-effectiveness, and enhanced technology, fostering a global community of learners. Students can access diverse study materials, submit assignments, and engage in interactive learning experiences.</p>
                     </div>
                 </div>
                 <div className="collapse collapse-arrow join-item border border-base-300">
                     <input type="radio" name="my-accordion-4" />
                     <div className="collapse-title text-xl font-medium">
-                        Is it safe to buy from CarHant?
+                        How can I progress with Study Corner?
                     </div>
                     <div className="collapse-content">
-                        <p>Buying from CarHant can be safe if you do your due diligence. Research the company thoroughly, checking online reviews, customer testimonials, and their rating with reputable business bureaus. Ensure they are licensed and accredited. Before making any decisions, inspect the car carefully or have a trusted mechanic examine it. Ask for a detailed vehicle history report and review the terms of the sale, including warranties and return policies. </p>
+                        <p>To progress with Study Corner, create an account, explore study materials, complete assignments, engage in discussions, seek support, manage your time effectively, utilize feedback, and stay consistent for continuous learning. </p>
                     </div>
                 </div>
                 <div className="collapse collapse-arrow join-item border border-base-300">
                     <input type="radio" name="my-accordion-4" />
                     <div className="collapse-title text-xl font-medium">
-                        CarHant is the best company in automotive?
+                        Study Corner is the best online platform for study?
                     </div>
                     <div className="collapse-content">
-                        <p>CarHant is widely acclaimed as the pinnacle in the automotive sector. Renowned for impeccable customer service, top-notch vehicles, and transparent transactions, CarHant stands out. Its commitment to reliability, competitive pricing, and innovation has made it the trusted choice for discerning buyers, solidifying its reputation as the best in the industry.</p>
+                        <p>Certainly! Yes, Study Corner is an online study platform that allows students to study and submit assignments. Whether it is the best platform depends on individual preferences, but it offers a convenient and interactive learning experience for many students.</p>
                     </div>
                 </div>
             </div>

@@ -57,7 +57,7 @@ const SubmitAssignment = () => {
     }
 
     return (
-        <div className='bg-[#F4F3F0] px-2 lg:px-[140px] py-12 mt-12 mb-12 rounded-md'>
+        <div className='bg-white px-2 lg:px-[140px] py-12 mt-12 mb-12 rounded-md'>
             <h1 className='text-2xl font-semibold mb-8 text-center'>Submit The Assignment</h1>
 
             <form onSubmit={handleSubmitAssignment}>

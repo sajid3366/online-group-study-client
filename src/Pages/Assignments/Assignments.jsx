@@ -23,7 +23,7 @@ const Assignments = () => {
         <div className="mt-12">
             <div className="flex gap-8">
                 <div className="flex-[1]">
-                    <div className='bg-base-200 px-5 py-3 rounded-md text-center h-screen'>
+                    <div className='bg-base-300 px-5 py-3 rounded-md text-center h-screen'>
                         <h1 className="text-xl mb-3 mt-5">You can filter based on difficuly level</h1>
                         <form onSubmit={handleDifficultyLevel}>
                             <select name="difficulty" className="select max-w-xs text-lg border-2 mt-2 rounded-md px-4 border-solid w-full h-[50px]">

@@ -60,7 +60,7 @@ const AllAssignments = ({ assignment, assignments, setAssignments }) => {
 
     return (
         <div>
-            <div className="bg-gray-100 rounded-md mb-8 px-5 py-3 lg:flex gap-8">
+            <div className="bg-white rounded-md mb-8 px-5 py-3 lg:flex gap-8">
                 <img className="w-[450px] rounded-lg h-[250px]" src={photo} alt="" />
                 <div className="lg:w-1/2">
                     <h2 className="text-2xl mt-5  mb-3 lg:mt-5 font-semibold">Title : {title}</h2>

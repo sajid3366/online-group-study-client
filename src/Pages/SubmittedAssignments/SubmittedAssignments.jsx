@@ -13,7 +13,7 @@ const SubmittedAssignments = () => {
                 <div className="grid grid-cols-4   gap-5">
                     {
                         assignments.map(assignment => <>
-                        <div className="bg-base-200 space-y-3 px-5 py-4 rounded-md" key={assignment._id}>
+                        <div className="bg-base-300 space-y-3 px-5 py-4 rounded-md" key={assignment._id}>
                             <h1 className="font-semibold text-xl">Assignment Title : {assignment.title}</h1>
                             <p className="text-lg font-medium">Mark : {assignment.mark}</p>
                             <p>Assignment Status : {assignment.status}</p>
