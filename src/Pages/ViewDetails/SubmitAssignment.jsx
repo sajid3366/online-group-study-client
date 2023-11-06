@@ -1,14 +1,22 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 
 const SubmitAssignment = () => {
 
-    const assignment = useLoaderData()
-    console.log(assignment);
+    const loadedAssignments = useLoaderData()
+    console.log(loadedAssignments);
     const { user } = useContext(AuthContext)
     console.log(user);
+    const { id } = useParams();
+
+    const [assignments, setAssignments] = useState({});
+    console.log(assignments);
+    useEffect(() =>{
+        const findCarDetail = loadedAssignments.find(assignment => assignment._id == id);
+        setAssignments(findCarDetail);
+    },[loadedAssignments, id])
 
     const handleSubmitAssignment = e => {
         e.preventDefault();
@@ -18,8 +26,8 @@ const SubmitAssignment = () => {
         const note = form.note.value;
         const email = user.email;
         const name = user.displayName;
-        const mark = assignment.mark;
-        const title = assignment.title;
+        const mark = assignments.mark;
+        const title = assignments.title;
 
         const submitAssignment = {
            name, title, email, link, note, mark, status: "Pending"
@@ -40,7 +48,7 @@ const SubmitAssignment = () => {
                 if (data.insertedId) {
                     Swal.fire({
                         title: 'Success!',
-                        text: 'Assignment Created Successfully',
+                        text: 'Assignment Submited Successfully',
                         icon: 'success',
                         confirmButtonText: 'OK'
                     })

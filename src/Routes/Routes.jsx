@@ -42,12 +42,13 @@ const router = createBrowserRouter([
             },
             {
                 path: "myassignments",
-                element: <PrivateRoute><MyAssignments></MyAssignments></PrivateRoute>
+                element: <PrivateRoute><MyAssignments></MyAssignments></PrivateRoute>,
+                // loader : () => fetch(`http://localhost:5000/myassignment`)
             },
             {
                 path: "submittedassignments",
                 element: <PrivateRoute><SubmittedAssignments></SubmittedAssignments></PrivateRoute>,
-                loader: () => fetch(`http://localhost:5000/myassignment/Pending`)
+                loader: () => fetch(`http://localhost:5000/pendingassignment/Pending`)
             },
             {
                 path: '/viewdetails/:id',
@@ -62,7 +63,7 @@ const router = createBrowserRouter([
             {
                 path: "/submitassignment/:id",
                 element: <SubmitAssignment></SubmitAssignment>,
-                loader : ({params}) => fetch(`http://localhost:5000/myassignment/submit/${params.id}`)
+                loader : () => fetch(`http://localhost:5000/assignment`)
                 
             },
             {

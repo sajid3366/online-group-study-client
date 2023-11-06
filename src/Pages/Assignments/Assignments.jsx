@@ -1,11 +1,13 @@
 import { useLoaderData } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import AllAssignments from "./AllAssignments";
+import { useState } from "react";
 
 const Assignments = () => {
 
-    const assignments = useLoaderData();
-    console.log(assignments);
+    const loadedAssignments = useLoaderData();
+    console.log(loadedAssignments);
+    const [assignments, setAssignments] = useState(loadedAssignments)
 
     return (
         <div className="mt-12">
@@ -16,7 +18,7 @@ const Assignments = () => {
 
                 <div className="flex-[3]">
                     {
-                        assignments.map(assignment => <AllAssignments key={assignment._id} assignment={assignment}></AllAssignments>)
+                        assignments.map(assignment => <AllAssignments key={assignment._id} assignment={assignment} assignments={assignments} setAssignments={setAssignments}></AllAssignments>)
                     }
                 </div>
 

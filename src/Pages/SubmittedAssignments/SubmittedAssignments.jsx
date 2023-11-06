@@ -9,8 +9,8 @@ const SubmittedAssignments = () => {
     return (
         <div className="my-12 ">
             <div className="">
-                <h1 className="text-center mb-10 text-3xl font-semibold">All the pending assignments here{assignments.length}</h1>
-                <div className="grid grid-cols-4  gap-5">
+                <h1 className="text-center mb-10 text-3xl font-semibold">All the pending assignments here</h1>
+                <div className="grid grid-cols-4   gap-5">
                     {
                         assignments.map(assignment => <>
                         <div className="bg-base-200 space-y-3 px-5 py-4 rounded-md" key={assignment._id}>
@@ -20,7 +20,7 @@ const SubmittedAssignments = () => {
                             <p className="text-xl ">Examinee Name : {assignment.name}</p>
 
                             <Link to={`/givemark/${assignment._id}`}>
-                            <button className="btn btn-outline btn-accent mt-12">Give Mark</button>
+                            <button className="btn btn-outline btn-accent mt-8">Give Mark</button>
 
                             </Link>
                             

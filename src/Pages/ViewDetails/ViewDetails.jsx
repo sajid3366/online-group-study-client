@@ -8,13 +8,11 @@ const ViewDetails = () => {
     const [detail, setDetail] = useState({});
     console.log(detail);
     useEffect(() => {
-        const findCarDetail = details.find(car => car._id == id);
-        setDetail(findCarDetail);
+        const findAssignmentDetail = details.find(assignment => assignment._id == id);
+        setDetail(findAssignmentDetail);
     }, [details, id])
 
-    const handleTakeAssignment = () => {
-
-    }
+    
 
 
     return (
@@ -27,7 +25,7 @@ const ViewDetails = () => {
                 <p>Assignment Mark : {detail.mark}</p>
                 <p>{detail.description}</p>
                 <Link to={`/submitassignment/${id}`}>
-                    <p onClick={handleTakeAssignment} className='bg-red-600 text-white cursor-pointer  px-4 py-2 mt-[120px] w-[190px] rounded-md text-xl font-semibold'>Take Assignment</p>
+                    <p className='bg-red-600 text-white cursor-pointer  px-4 py-2 mt-[120px] w-[190px] rounded-md text-xl font-semibold'>Take Assignment</p>
                 </Link>
             </div>
         </div>
