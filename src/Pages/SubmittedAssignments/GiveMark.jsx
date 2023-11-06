@@ -5,7 +5,7 @@ const GiveMark = () => {
 
     const assignment = useLoaderData()
     console.log(assignment);
-    const { link, mark } = assignment;
+    const { link, mark, note } = assignment;
     const handleGiveMark = e => {
         e.preventDefault();
 
@@ -45,24 +45,27 @@ const GiveMark = () => {
     return (
         <div className='bg-[#F4F3F0] px-2 lg:px-[140px] py-12 mt-12 mb-12 rounded-md'>
             <h1 className='text-2xl font-semibold mb-8 text-center'>Assignment Marking</h1>
-
+            <div className="mb-8">
+                <h1 className="font-semibold mb-2 text-black text-lg">PDF Link : <span className="font-normal text-base">{link}</span></h1>
+                <p className="font-semibold mb-2 text-black text-lg">Quick Note : <span className="font-normal text-base">{note}</span></p>
+            </div>
             <form onSubmit={handleGiveMark}>
-                <div className="flex gap-4 mb-4">
-                    <div className='md:w-1/2 mb-5'>
+                <div className=" mb-4">
+                    {/* <div className='md:w-1/2 mb-5'>
                         <p>Assignment PDF Link</p>
                         <input className='border-2 rounded-md mt-2 border-solid px-4 w-full h-[50px]' placeholder='PDF' defaultValue={link} type="text" name="link" id="" />
 
-                    </div>
+                    </div> */}
 
-                    <div className='md:w-1/2'>
+                    <div className='w-full'>
                         <p>Mark</p>
                         <input className='border-2 rounded-md mt-2 border-solid px-4 w-full h-[50px]' placeholder={`Give Mark out of ${mark}`} type="text" name="mark" id="" />
 
                     </div>
                 </div>
 
-                <div className='flex gap-4 mb-8'>
-                    <div className='w-full'>
+                <div className=' mb-8'>
+                    <div className=''>
                         <p>Feedback</p>
                         <textarea placeholder="Feedback" className="border-2 border-solid px-4 py-1 rounded-md mt-2" name="feedback" id="" cols="129" rows="10"></textarea>
                     </div>
