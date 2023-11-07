@@ -1,6 +1,6 @@
 # StudyCorner
 
-- [StudyCorner](client side link will be here)
+- [StudyCorner](https://online-group-study-auth.web.app/)
 
 
 Feature of this project
