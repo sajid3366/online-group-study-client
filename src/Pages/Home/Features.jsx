@@ -1,60 +1,52 @@
 import { Link } from "react-router-dom";
-import { FaCar } from "react-icons/fa";
 
 
 const Features = () => {
     return (
         <div className="max-w-6xl mx-auto">
             <div  className="text-center my-8">
-                <h2 className="text-xl flex items-center justify-center gap-2 text-red-600  font-semibold"><FaCar></FaCar>POPULAR BRANDS</h2>
-                <h2 className="text-[40px]  font-bold">Explore The <span className="text-red-600">Luxury</span></h2>
+                <h2 className="text-[40px]  font-bold">Enhance Your  <span className="text-red-600">Learning</span></h2>
 
             </div>
             <div className="grid  lg:grid-cols-3 gap-6 ">
-                <Link to="/tesla">
-                    <div className="bg-gray-100 rounded-lg px-4 py-2 cursor-pointer">
-                        <img className="w-full h-[350px]" src="https://i.ibb.co/qkpqN6w/tesla-logo-2007-full-download.webp" alt="" />
-                        <hr className="h-2 " />
-                        <h1 className="text-4xl font-semibold text-center mt-2 mb-2">Tesla</h1>
+                <Link to="/liveclass">
+                    <div className="bg-white rounded-sm px-4 py-2 cursor-pointer">
+                        <img className="w-full rounded-md h-[350px]" src="https://i.ibb.co/sH0Fms7/live-class.jpg" alt="" />
+                        <h1 className="text-4xl font-semibold text-center mt-2 mb-2">Live Classes</h1>
                        
                     </div>
                 </Link>
-                <Link to="/ferrari">
-                    <div className="bg-gray-100 rounded-lg px-4 py-2 cursor-pointer">
-                        <img className="w-full h-[350px]" src="https://i.ibb.co/tChzGjJ/ferrari-logo.webp" alt="" />
-                        <hr className="h-2 " />
-                        <h1 className="text-4xl font-semibold text-center mt-2 mb-2">Ferrari</h1>
+                <Link to="/courses">
+                    <div className="bg-white rounded-sm px-4 py-2 cursor-pointer">
+                        <img className="w-full rounded-md h-[350px]" src="https://i.ibb.co/2SHD9w0/online-course.jpg" alt="" />
+                        <h1 className="text-4xl font-semibold text-center mt-2 mb-2">Online Courses</h1>
                     </div>
                 </Link>
 
-                <Link to="/bmw">
-                    <div className="bg-gray-100 rounded-lg px-4 py-2 cursor-pointer">
-                        <img className="w-full h-[350px]" src="https://i.ibb.co/qsGXJJh/bmw-logo-2020-gray-download.webp" alt="" />
-                        <hr className="h-2 " />
-                        <h1 className="text-4xl font-semibold text-center mt-2 mb-2">BMW</h1>
+                <Link to="/resource">
+                    <div className="bg-white rounded-sm px-4 py-2 cursor-pointer">
+                        <img className="w-full rounded-md h-[350px]" src="https://i.ibb.co/6WBztrH/library.jpg" alt="" />
+                        <h1 className="text-4xl font-semibold text-center mt-2 mb-2">Resource Library</h1>
                     </div>
                 </Link>
 
-                <Link to="/hyundai">
-                    <div className="bg-gray-100 rounded-lg px-4 py-2 cursor-pointer">
-                        <img className="w-full h-[350px]" src="https://i.ibb.co/WK6Qdrb/hyundai-logo-2011-download.webp" alt="" />
-                        <hr className="h-2 " />
-                        <h1 className="text-4xl font-semibold text-center mt-2 mb-2">Hyundai</h1>
+                <Link to="/support">
+                    <div className="bg-white rounded-sm px-4 py-2 cursor-pointer">
+                        <img className="w-full rounded-md h-[350px]" src="https://i.ibb.co/Hx1tyCm/support.jpg" alt="" />
+                        <h1 className="text-4xl font-semibold text-center mt-2 mb-2">Instructor Support</h1>
                     </div>
                 </Link>
 
-                <Link to="/ford">
-                    <div className="bg-gray-100 rounded-lg px-4 py-2 cursor-pointer">
-                        <img className="w-full h-[350px]" src="https://i.ibb.co/48VLpx3/ford-logo-2017-download.webp" alt="" />
-                        <hr className="h-2 " />
-                        <h1 className="text-4xl font-semibold text-center mt-2 mb-2">Ford</h1>
+                <Link to="/certificates">
+                    <div className="bg-white rounded-sm px-4 py-2 cursor-pointer">
+                        <img className="w-full rounded-md h-[350px]" src="https://i.ibb.co/yhWL5kf/cretificate.jpg" alt="" />
+                        <h1 className="text-4xl font-semibold text-center mt-2 mb-2">Certificates</h1>
                     </div>
                 </Link>
-                <Link to="/toyota">
-                    <div className="bg-gray-100 rounded-lg px-4 py-2 cursor-pointer">
-                        <img className="w-full h-[350px]" src="https://i.ibb.co/yXdjYYM/toyota-logo-2020-europe-download.webp" alt="" />
-                        <hr className="h-2 " />
-                        <h1 className="text-4xl font-semibold text-center mt-2 mb-2">Toyota</h1>
+                <Link to="/payment ">
+                    <div className="bg-white rounded-sm px-4 py-2 cursor-pointer">
+                        <img className="w-full rounded-md h-[350px]" src="https://i.ibb.co/CtrRm1q/payment.jpg" alt="" />
+                        <h1 className="text-4xl font-semibold text-center mt-2 mb-2">Payment</h1>
                     </div>
                 </Link>
 

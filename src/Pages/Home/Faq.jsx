@@ -1,9 +1,9 @@
 
 const Faq = () => {
     return (
-        <div className=" max-w-7xl mt-10 py-10 px-5 mx-auto mb-20">
+        <div className=" max-w-7xl mt-14 py-10 px-5 mx-auto mb-20">
         <h1 className="text-4xl font-bold mb-3 text-center">People Frequently <span className="text-red-600">Ask</span></h1>
-        <hr className="mb-10 max-w-md mx-auto" />
+        <hr className="mb-7 max-w-md mx-auto" />
         <div className="lg:flex gap-8 items-center">
             <div className="join join-vertical mb-3 w-3/4">
                 <div className="collapse collapse-arrow join-item border border-base-300">
@@ -34,7 +34,7 @@ const Faq = () => {
                     </div>
                 </div>
             </div>
-            <img className="lg:w-1/4 h-[70%]" src="https://i.ibb.co/xFvhf4d/jamie-street-Jt-P-Dqtz6-D8-unsplash.jpg" alt="" />
+            <img className="lg:w-1/4 h-[70%]" src="https://i.ibb.co/B4mM27m/faq-pic.jpg" alt="" />
         </div>
     </div>
     );
