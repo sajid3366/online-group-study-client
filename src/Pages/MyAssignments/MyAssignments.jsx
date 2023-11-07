@@ -8,7 +8,7 @@ const MyAssignments = () => {
     console.log(assignments);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myassignment/${user.email}`)
+        fetch(`http://localhost:5000/myassignment/${user.email}`, {credentials: 'include'})
             .then(res => res.json())
             .then(data => {
                 setAssignments(data);

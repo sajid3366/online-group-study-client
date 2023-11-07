@@ -5,7 +5,7 @@ import Footer from '../../Footer/Footer';
 const ErrorPage = () => {
     return (
         <div>
-            <div className='max-w-7xl mx-auto my-12'>
+            <div>
                 <Navbar></Navbar>
                 <div className='mt-12 mb-12 text-center '>
                     <h2 className="text-8xl my-4">404</h2>
