@@ -17,7 +17,7 @@ const MyAssignments = () => {
 
     return (
         <div className="overflow-x-auto my-12">
-            <h1 className="text-4xl font-semibold text-center mb-5">All of my assignments</h1>
+            <h1 className="text-4xl font-semibold text-center mb-5">All of your assignments</h1>
             <hr className="mt-1 max-w-xl mx-auto mb-8" />
             <div className="overflow-x-auto">
                 <table className="table">
@@ -31,7 +31,9 @@ const MyAssignments = () => {
                             <th>Obtain Mark</th>
                             <th>Feedback</th>
                         </tr>
+
                     </thead>
+
                     <tbody>
                         {/* row 1 */}
                         {
@@ -44,7 +46,7 @@ const MyAssignments = () => {
                                 <td>{assignment.feedback}</td>
                             </tr>)
                         }
-                        
+
                     </tbody>
                 </table>
             </div>

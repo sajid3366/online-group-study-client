@@ -9,7 +9,7 @@ const SubmittedAssignments = () => {
     return (
         <div className="my-12 ">
             <div className="">
-                <h1 className="text-center mb-10 text-3xl font-semibold">All the pending assignments here</h1>
+                <h1 className="text-center mb-10 text-3xl font-semibold">All the pending assignments</h1>
                 <div className="grid grid-cols-4   gap-5">
                     {
                         assignments.map(assignment => <>
