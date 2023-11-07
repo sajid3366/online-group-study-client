@@ -7,7 +7,7 @@ const Faq = () => {
         <div className="lg:flex gap-8 items-center">
             <div className="join join-vertical mb-3 w-3/4">
                 <div className="collapse collapse-arrow join-item border border-base-300">
-                    <input type="radio" name="my-accordion-4" checked="checked" />
+                    <input type="radio" name="my-accordion-4"  />
                     <div className="collapse-title text-xl font-medium">
                         Why choose Study Corner?
                     </div>

@@ -6,16 +6,13 @@ import axios from "axios";
 const Assignments = () => {
 
     const loadedAssignments = useLoaderData();
-    console.log(loadedAssignments);
     const [assignments, setAssignments] = useState(loadedAssignments)
     const [assignmentsPerPage, setAssignmentsPerPage] = useState(5)
     const [currentPage, setCurrentPage] = useState(0);
     const [count, setCount] = useState(0);
     const numOfPages = Math.ceil(count / assignmentsPerPage);
-    console.log(numOfPages);
 
     const pages = [...Array(numOfPages).keys()]
-    console.log(pages);
 
     const handleDifficultyLevel = (e) => {
         e.preventDefault();
@@ -24,6 +21,8 @@ const Assignments = () => {
         axios.get(`http://localhost:5000/assignmentlevel/${difficulty}`)
             .then(result => {
                 setAssignments(result.data);
+                setCount(result.data.length)
+
             })
     }
 
@@ -43,7 +42,6 @@ const Assignments = () => {
 
     const handlePagination = e => {
         const val = parseInt(e.target.value)
-        console.log(val);
         setAssignmentsPerPage(val);
         setCurrentPage(0)
     }
@@ -90,17 +88,16 @@ const Assignments = () => {
 
             </div>
             <div className='text-center'>
-                <p >Current page{currentPage}</p>
                 <button onClick={handlePrevPage} className="btn  border-2 mr-2 border-gray-200" >Prev</button>
                 {
                     pages.map(page => <button
                         onClick={()=> setCurrentPage(page)}
                         className={`w-12 rounded-md h-12 bg-gray-200 border-2 mr-2 border-gray-200 ${currentPage === page ? "bg-orange-400" : undefined} `} key={page}>
-                        {page}
+                        {page+1}
                     </button>)
                 }
                 <button onClick={handleNextPage} className="btn border-2 border-gray-200">Next</button>
-                <select className="ml-2 w-14 h-12 rounded-md" value={assignmentsPerPage} onChange={handlePagination} name="" id="">
+                <select className="ml-2 w-14 h-12 text-lg rounded-md" value={assignmentsPerPage} onChange={handlePagination} name="" id="">
                     <option value="5">5</option>
                     <option value="10">10</option>
                     <option value="20">20</option>
