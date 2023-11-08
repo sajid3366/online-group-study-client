@@ -10,7 +10,7 @@ const AllAssignments = ({ assignment, assignments, setAssignments }) => {
     const { user } = useContext(AuthContext)
     
     // eslint-disable-next-line react/prop-types
-    const { _id, title, photo, mark, difficulty } = assignment;
+    const { _id, title, date, photo, mark, difficulty } = assignment;
 
 
     const handleDeleteAssignment = id => {
@@ -64,12 +64,13 @@ const AllAssignments = ({ assignment, assignments, setAssignments }) => {
                 <img className="w-[450px] rounded-lg h-[250px]" src={photo} alt="" />
                 <div className="lg:w-1/2">
                     <h2 className="text-2xl mt-5  mb-3 lg:mt-5 font-semibold">Title : {title}</h2>
-                    <p className="text-xl mb-3">Difficuly : {difficulty}</p>
-                    <p className="text-lg font-semibold">Mark : {mark}</p>
+                    <p className="text-xl font-semibold mb-2">Difficuly : {difficulty}</p>
+                    <p className="text-lg font-normal mb-3">Mark : {mark}</p>
+                    <p className="text-lg font-light">Last Date : {date}</p>
                     <div className="mt-10 lg:mt-14 flex gap-5 w-full">
-                        <Link to={`/viewdetails/${_id}`}><p className="bg-red-600 text-xl font-semibold  text-white px-4 py-2 rounded-sm cursor-pointer">View Assignment</p></Link>
+                        <Link to={`/viewdetails/${_id}`}><p className="bg-red-600 md:text-xl font-semibold  text-white px-4 py-2 rounded-sm cursor-pointer">View Assignment</p></Link>
                         <Link to={`/update/${_id}`}>
-                            <p className="border-red-600 border-2 text-xl font-semibold rounded-sm text-red-600 px-4 py-2  cursor-pointer">Update</p>
+                            <p className="border-red-600 border-2 md:text-xl font-semibold rounded-sm text-red-600 px-4 py-[6px]  cursor-pointer">Update</p>
                         </Link>
                         <div onClick={() => handleDeleteAssignment(_id)} className="text-4xl ml-12 cursor-pointer ">
                             <MdDelete></MdDelete>

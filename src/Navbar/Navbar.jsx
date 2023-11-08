@@ -11,15 +11,15 @@ const Navbar = () => {
         logOut()
     }
     return (
-        <nav className=" lg:flex justify-between  items-center px-4 h-[100%] ">
+        <nav className=" lg:flex justify-between mt-1  items-center px-4 h-[100%] ">
             <div>
                 <Link to="/">
                     <img className='w-full lg:w-[200px] cursor-pointer' src="https://i.ibb.co/pfhtbzx/study-corner.png" alt="" />
                 </Link>
             </div>
 
-            <div className='flex '>
-                <ul className="flex justify-center font-semibold mt-5 lg:mt-0 lg:ml-12 items-center gap-x-6">
+            <div className='lg:flex '>
+                <ul className="flex flex-wrap gap-y-3 justify-center font-semibold mt-5 lg:mt-0 lg:ml-12 items-center gap-x-6">
                     <li>
                         <NavLink
                             to="/"

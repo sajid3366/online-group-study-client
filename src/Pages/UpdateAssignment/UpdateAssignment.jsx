@@ -58,14 +58,13 @@ const UpdateAssignment = () => {
 
             <form onSubmit={handleUpdateAssignment}>
                 <div className="flex gap-4 mb-8">
-                    <div className='md:w-1/2'>
+                    <div className='w-1/2'>
                         <p>Assignment Title</p>
                         <input className='border-2 rounded-md mt-2 border-solid px-4 w-full h-[50px]' placeholder='Assignment Name' defaultValue={assignment.title} type="text" name="title" id="" />
 
                     </div>
-                    <div className='md:w-1/2'>
+                    <div className='w-1/2'>
                         <p>Difficulty Level</p>
-                        {/* <input className='border-2 mt-2 rounded-md px-4 border-solid w-full h-[50px]' placeholder='Type' type="text" name="difficulty" id="" /> */}
 
                         <select name="difficulty" defaultValue={assignment.difficulty} className="select max-w-xs border-2 mt-2 rounded-md px-4 border-solid w-full h-[50px]">
                             <option>Easy</option>
@@ -77,16 +76,16 @@ const UpdateAssignment = () => {
                 </div>
 
                 <div className='flex gap-4 mb-8'>
-                    <div className='md:w-1/2'>
+                    <div className='w-1/2'>
                         <p>Mark</p>
                         <input className='border-2 rounded-md mt-2 border-solid px-4 w-full h-[50px]' placeholder='Mark' defaultValue={assignment.mark} type="text" name="mark" id="" />
 
                     </div>
 
-                    <div className='md:w-1/2'>
+                    <div className='w-1/2'>
                         <p>Due Date</p>
                         <DatePicker
-                            className="border-2 rounded-md mt-2 px-4 border-solid w-[500px] h-[50px]" name="date" placeholderText="Due Date" selected={startDate} onChange={(date) => setStartDate(date)} />
+                            className="border-2 rounded-md mt-2 px-4 border-solid  w-[200px] md:w-[370px] lg:w-[490px] h-[50px]" name="date" placeholderText="Due Date" selected={startDate} onChange={(date) => setStartDate(date)} />
 
                     </div>
 
@@ -97,7 +96,7 @@ const UpdateAssignment = () => {
                         <input className='border-2 px-4 rounded-md mt-2 border-solid w-full h-[50px]' placeholder='Thumbnail Image URL' defaultValue={assignment.photo} type="text" name="photo" id="" />
 
                     </div>
-                    <div className='md:w-1/2'>
+                    <div className='w-1/2'>
                         <p>Description</p>
                         <input className='border-2 rounded-md px-4 mt-2 border-solid w-full h-[50px]' placeholder='Description' defaultValue={assignment.description} type="text" name="description" id="" />
 

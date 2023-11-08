@@ -69,7 +69,7 @@ const SubmitAssignment = () => {
                     </div>
                     <div>
                         <p>Quick Note</p>
-                        <textarea placeholder="A message about the assignment" className="border-2 border-solid px-4 py-1 rounded-md mt-2" name="note" id="" cols="129" rows="10"></textarea>
+                        <textarea placeholder="A message about the assignment" className="border-2 border-solid w-[410px] md:w-full lg:w-full px-4 py-1 rounded-md mt-2" name="note" id="" cols="129" rows="10"></textarea>
                     </div>
 
                 </div>

@@ -49,7 +49,7 @@ const router = createBrowserRouter([
             {
                 path: "submittedassignments",
                 element: <PrivateRoute><SubmittedAssignments></SubmittedAssignments></PrivateRoute>,
-                loader: () => fetch(`http://localhost:5000/pendingassignment/Pending`, {credentials: 'include'})
+                loader: () => fetch(`http://localhost:5000/pendingassignment/Pending`)
             },
             {
                 path: '/viewdetails/:id',

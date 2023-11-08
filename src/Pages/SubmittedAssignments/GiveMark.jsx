@@ -51,12 +51,7 @@ const GiveMark = () => {
             </div>
             <form onSubmit={handleGiveMark}>
                 <div className=" mb-4">
-                    {/* <div className='md:w-1/2 mb-5'>
-                        <p>Assignment PDF Link</p>
-                        <input className='border-2 rounded-md mt-2 border-solid px-4 w-full h-[50px]' placeholder='PDF' defaultValue={link} type="text" name="link" id="" />
-
-                    </div> */}
-
+                    
                     <div className='w-full'>
                         <p>Mark</p>
                         <input className='border-2 rounded-md mt-2 border-solid px-4 w-full h-[50px]' placeholder={`Give Mark out of ${mark}`} type="text" name="mark" id="" />
@@ -67,7 +62,7 @@ const GiveMark = () => {
                 <div className=' mb-8'>
                     <div className=''>
                         <p>Feedback</p>
-                        <textarea placeholder="Feedback" className="border-2 border-solid px-4 py-1 rounded-md mt-2" name="feedback" id="" cols="129" rows="10"></textarea>
+                        <textarea placeholder="Feedback" className="border-2 w-[410px] md:w-full lg:w-full border-solid px-4 py-1 rounded-md mt-2" name="feedback" id="" cols="129" rows="10"></textarea>
                     </div>
                 </div>
 

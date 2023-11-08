@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Features = () => {
     return (
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto px-2">
             <div  className="text-center my-8">
                 <h2 className="text-[40px]  font-bold">Enhance Your  <span className="text-red-600">Learning</span></h2>
 

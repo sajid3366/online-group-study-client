@@ -66,15 +66,13 @@ const CreateAssignments = () => {
 
             <form onSubmit={handleCreateAssignment}>
                 <div className="flex gap-4 mb-8">
-                    <div className='md:w-1/2'>
+                    <div className='w-1/2'>
                         <p>Assignment Title</p>
                         <input className='border-2 rounded-md mt-2 border-solid px-4 w-full h-[50px]' placeholder='Assignment Name' required type="text" name="title" id="" />
 
                     </div>
-                    <div className='md:w-1/2'>
+                    <div className='w-1/2'>
                         <p>Difficulty Level</p>
-                        {/* <input className='border-2 mt-2 rounded-md px-4 border-solid w-full h-[50px]' placeholder='Type' type="text" name="difficulty" id="" /> */}
-                       
                         <select name="difficulty" required className="select max-w-xs border-gray-300 border-2 mt-2 rounded-md px-4 border-solid w-full h-[50px]">
                             <option>Easy</option>
                             <option>Medium</option>
@@ -85,7 +83,7 @@ const CreateAssignments = () => {
                 </div>
 
                 <div className='flex gap-4 mb-8'>
-                    <div className='md:w-1/2'>
+                    <div className='w-1/2'>
                         <p>Mark</p>
                         <input className='border-2 rounded-md mt-2 border-solid px-4 w-full h-[50px]' placeholder='Mark' type="text" required name="mark" id="" />
                         <label className="label">
@@ -98,9 +96,9 @@ const CreateAssignments = () => {
                     </label>
                     </div>
 
-                    <div className='md:w-1/2'>
+                    <div className='w-1/2'>
                         <p>Due Date</p>
-                        <DatePicker  required className="border-2 rounded-md mt-2 px-4 border-solid w-[500px] h-[50px]"  name="date" placeholderText="Due Date" selected={startDate} onChange={(date) => setStartDate(date)} />
+                        <DatePicker  required className="border-2 rounded-md mt-2 px-4 border-solid w-[200px] md:w-[370px] lg:w-[490px] h-[50px]"  name="date" placeholderText="Due Date" selected={startDate} onChange={(date) => setStartDate(date)} />
 
                     </div>
 
@@ -111,7 +109,7 @@ const CreateAssignments = () => {
                         <input className='border-2 px-4 rounded-md mt-2 border-solid w-full h-[50px]' placeholder='Thumbnail Image URL' required type="text" name="photo" id="" />
 
                     </div>
-                    <div className='md:w-1/2'>
+                    <div className='w-1/2'>
                         <p>Description</p>
                         <input className='border-2  rounded-md px-4 mt-2 border-solid w-full h-[50px]' placeholder='Description' required type="text" name="description" id="" />
 
