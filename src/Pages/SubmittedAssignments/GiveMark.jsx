@@ -17,7 +17,7 @@ const GiveMark = () => {
         const assignmentMark = { feedback, obtainedMark, status: "Completed" }
         console.log(assignmentMark);
 
-        fetch(`http://localhost:5000/myassignment/givemark/${assignment._id}`, {
+        fetch(`https://online-group-study-server-gamma.vercel.app/myassignment/givemark/${assignment._id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'

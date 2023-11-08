@@ -18,7 +18,7 @@ const Assignments = () => {
         e.preventDefault();
         const form = e.target;
         const difficulty = form.difficulty.value;
-        axios.get(`http://localhost:5000/assignmentlevel/${difficulty}`)
+        axios.get(`https://online-group-study-server-gamma.vercel.app/assignmentlevel/${difficulty}`)
             .then(result => {
                 setAssignments(result.data);
                 setCount(result.data.length)
@@ -27,7 +27,7 @@ const Assignments = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/countAssignment`)
+        fetch(`https://online-group-study-server-gamma.vercel.app/countAssignment`)
             .then(res => res.json())
             .then(data => {
                 setCount(data.count)
@@ -35,7 +35,7 @@ const Assignments = () => {
     }, [])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/assignment?page=${currentPage}&size=${assignmentsPerPage}`)
+        fetch(`https://online-group-study-server-gamma.vercel.app/assignment?page=${currentPage}&size=${assignmentsPerPage}`)
             .then(res => res.json())
             .then(data => setAssignments(data))
     }, [currentPage, assignmentsPerPage]);

@@ -27,7 +27,7 @@ const AllAssignments = ({ assignment, assignments, setAssignments }) => {
             .then((result) => {
                 if (result.isConfirmed) {
                     if (assignment.email === user.email) {
-                        fetch(`http://localhost:5000/assignment/${id}`, {
+                        fetch(`https://online-group-study-server-gamma.vercel.app/assignment/${id}`, {
                             method: "DELETE",
 
                         })
@@ -68,9 +68,9 @@ const AllAssignments = ({ assignment, assignments, setAssignments }) => {
                     <p className="text-lg font-normal mb-3">Mark : {mark}</p>
                     <p className="text-lg font-light">Last Date : {date}</p>
                     <div className="mt-10 lg:mt-14 flex gap-5 w-full">
-                        <Link to={`/viewdetails/${_id}`}><p className="bg-red-600 md:text-xl font-semibold  text-white px-4 py-2 rounded-sm cursor-pointer">View Assignment</p></Link>
+                        <Link to={`/viewdetails/${_id}`}><p className="bg-red-600 md:text-lg font-semibold  text-white px-3 py-2 rounded-sm cursor-pointer">View Assignment</p></Link>
                         <Link to={`/update/${_id}`}>
-                            <p className="border-red-600 border-2 md:text-xl font-semibold rounded-sm text-red-600 px-4 py-[6px]  cursor-pointer">Update</p>
+                            <p className="border-red-600 border-2 md:text-lg font-semibold rounded-sm text-red-600 px-4 py-[6px]  cursor-pointer">Update</p>
                         </Link>
                         <div onClick={() => handleDeleteAssignment(_id)} className="text-4xl ml-12 cursor-pointer ">
                             <MdDelete></MdDelete>

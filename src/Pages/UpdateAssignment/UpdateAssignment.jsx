@@ -28,7 +28,7 @@ const UpdateAssignment = () => {
 
         const updateAssignment = { email, title, difficulty, mark, date, description, photo , status: "ok" };
         console.log(updateAssignment);
-        fetch(`http://localhost:5000/assignment/${assignment._id}`, {
+        fetch(`https://online-group-study-server-gamma.vercel.app/assignment/${assignment._id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'

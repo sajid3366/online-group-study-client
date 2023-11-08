@@ -40,7 +40,7 @@ const router = createBrowserRouter([
             {
                 path: "assignments",
                 element: <Assignments></Assignments>,
-                loader: () => fetch(`http://localhost:5000/assignment`)
+                loader: () => fetch(`https://online-group-study-server-gamma.vercel.app/assignment`)
             },
             {
                 path: "myassignments",
@@ -49,29 +49,30 @@ const router = createBrowserRouter([
             {
                 path: "submittedassignments",
                 element: <PrivateRoute><SubmittedAssignments></SubmittedAssignments></PrivateRoute>,
-                loader: () => fetch(`http://localhost:5000/pendingassignment/Pending`)
+                loader: () => fetch(`https://online-group-study-server-gamma.vercel.app/pendingassignment/Pending`)
             },
             {
                 path: '/viewdetails/:id',
                 element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
-                loader: () => fetch(`http://localhost:5000/assignment`)
+                loader: () => fetch(`https://online-group-study-server-gamma.vercel.app/assignment`)
             },
             {
                 path: "/update/:id",
                 element: <PrivateRoute><UpdateAssignment></UpdateAssignment></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/assignment/update/${params.id}`)
+                loader: ({params}) => fetch(`https://online-group-study-server-gamma.vercel.app/assignment/update/${params.id}`)
             },
             {
                 path: "/submitassignment/:id",
                 element: <SubmitAssignment></SubmitAssignment>,
-                loader : () => fetch(`http://localhost:5000/assignment`)
+                loader : () => fetch(`https://online-group-study-server-gamma.vercel.app/assignment`)
                 
             },
             {
                 path: "/givemark/:id",
                 element: <GiveMark></GiveMark>,
-                loader: ({params}) => fetch(`http://localhost:5000/myassignment/givemark/${params.id}`)
-            }
+                loader: ({params}) => fetch(`https://online-group-study-server-gamma.vercel.app/myassignment/givemark/${params.id}`)
+            },
+            
 
 
         ]

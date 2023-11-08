@@ -23,7 +23,7 @@ const SubmittedAssignments = () => {
                                     <button className="btn btn-outline btn-accent mt-8">Give Mark</button>
 
                                 </Link>
-
+                                
                             </div>
 
                         )

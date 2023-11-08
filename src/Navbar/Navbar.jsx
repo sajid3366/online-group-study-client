@@ -11,7 +11,7 @@ const Navbar = () => {
         logOut()
     }
     return (
-        <nav className=" lg:flex justify-between mt-1  items-center px-4 h-[100%] ">
+        <nav className=" lg:flex justify-between py-1 items-center px-4 h-[100%] ">
             <div>
                 <Link to="/">
                     <img className='w-full lg:w-[200px] cursor-pointer' src="https://i.ibb.co/pfhtbzx/study-corner.png" alt="" />

@@ -8,7 +8,7 @@ const MyAssignments = () => {
     console.log(assignments);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myassignment/${user.email}`, {credentials: 'include'})
+        fetch(`https://online-group-study-server-gamma.vercel.app/myassignment/${user.email}`, {credentials: 'include'})
             .then(res => res.json())
             .then(data => {
                 setAssignments(data);

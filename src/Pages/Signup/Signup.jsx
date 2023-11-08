@@ -47,7 +47,7 @@ const Signup = () => {
                     name, email, password, photo
                 }
                 console.log(user);
-                fetch('http://localhost:5000/user', {
+                fetch('https://online-group-study-server-gamma.vercel.app/user', {
                     method: "POST",
                     headers: {
                         'content-type': 'application/json'

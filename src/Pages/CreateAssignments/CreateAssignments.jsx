@@ -38,7 +38,7 @@ const CreateAssignments = () => {
 
         
 
-        fetch('http://localhost:5000/assignment', {
+        fetch('https://online-group-study-server-gamma.vercel.app/assignment', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
